@@ -42,6 +42,11 @@ a:hover{
     display: flex; 
     background: #07133f;
 }
+h2{
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+}
 
 #partners{
     width: 100%;
@@ -49,15 +54,28 @@ a:hover{
     text-align: center;
     align-items: center;
     color: #07133f;
-    
+    border: 1px solid red;
+    height: 300px;
+
+    margin-top: 30px;
+}
+#aboutUs{
+    width: 100%;
+    font-size: 1.4rem;
+    text-align: center;
+    align-items: center;
+  border: 1px solid red;
+   height: 300px;
+
     margin-top: 30px;
 }
 
 #weatherContainer{
     text-align: center;
     font-size: 1.2rem;
-}
-main{
+} 
+
+ main{
     
         width: 500px;
         height: 600px;    
@@ -90,15 +108,15 @@ main:hover{
 
 
 
-body{
+ body{
     font-family: "Sansita",sans-serif;
-    /* background-color: #8BC6EC;
-    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%); */
+     background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%); 
     background-color: #0093E9;
 background-image: linear-gradient(90deg, #0093E9 0%, #80D0C7 100%);
 color: white;   
 
-}
+} 
 #weatherContainer{
     font-size: 1rem; 
 }
@@ -115,4 +133,4 @@ color: white;
     color: #293251;
     text-align: center;
     font-size: 1.2em;
-}
+} 
