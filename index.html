@@ -8,22 +8,43 @@
     <link rel="stylesheet" href="./Assets/style.css">
 </head>
 <body>
-    <main>
-        <div id="nav-bar">
-            <h2>About Us</h2>
-            <h2>Contact info</h2>
+    <div class="navbar">
+      <div><h1>MAWI<span id="title">NGU</span></h1>
+      </div>
+       <div id ="links">
+        <a href="#aboutUs">About Us</a>
+        <a href="">Partners</a>
+        <a href="">Contacts</a>
+      </div>
+    </div>
+    <div class="container">
+        <div class="app-title">
+            <p>Weather</p>
         </div>
-
-        <div id="header"><h1>Weather</h1></div>
-        <div id="notification"><p></p></div>
-
-        <div id="weatherContainer">
-            <div id="icon"><img src="" alt="Unknown" srcset=""></div>
-            <div id="tempValue"><p>.. <sup>o</sup><span>C</span></p></div>
-            <div id="tempDescription"><p></p></div>
-            <div id="location"><p></p></div>
+        <div class="notification"> </div>
+        <div class="weather-container">
+            <div class="weather-icon">
+                <img src="icons/unknown.png" alt="">
+            </div>
+            <div class="temperature-value">
+                <p>- °<span>C</span></p>
+            </div>
+            <div class="temperature-description">
+                <p> - </p>
+            </div>
+            <div class="location">
+                <p>-</p>
+            </div>
         </div>
-    </main>
+    </div>
+
+
+    <div id="aboutUs">
+        <p>Mawingu is a web application that focuses on weather forecasting around the globe.We leverage on modern technologies to make accurate weather patterns.We have been in existence for two years now.We pride ourselves having recognized by NASA as the most reliable reliable weather company in the sub saharan region.</p>
+    </div>
+    <div id="partners">
+        <p>Recognizing weather is a vast subject which comes with unprecedented challenges,we have come together with our partners to achiev the SDG 2030 goals on sustaainable weather conditions and goals which aim to improve humanity especially during thsu times of global hazards like global warnings</p>
+    </div>
  <script src="./Assets/script.js"></script>
     
 </body>

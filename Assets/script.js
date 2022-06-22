@@ -58,9 +58,57 @@ function showError(error){
 // Get Weather Api from open weather app 
 function getWeather(latitude,longitude){
     let  api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`
-    console.log(api);
+    
     fetch(api)
-    .then(
+        .then(function(response){
+            let results = response.json();
+            return results;
+        }
         
-    )
+        
+        
+        )
+        .then(function(results){
+            weather.temperature.value = Math.floor(data.main.temp - KELVIN);
+            weather.description = results.weather[0].description;
+            weather.iconId = results.weather[0].icon;
+            weather.city = results.name;
+            weather.country = results.sys.country;
+        })
+        .then(function(){
+            displayWeather();
+        }
+        );
 }
+${weather.iconId}
+
+    // DISPLAY WEATHER TO UI
+function displayWeather(){
+    iconElement.innerHTML = `<img src="./Images
+    .png"/>`;
+    tempElement.innerHTML = `${weather.temperature.value}°<span>C</span>`;
+    descElement.innerHTML = weather.description;
+    locationElement.innerHTML = `${weather.city}, ${weather.country}`;
+}
+
+// C to F conversion
+function celsiusToFahrenheit(temperature){
+    return (temperature * 9/5) + 32;
+}
+
+// WHEN THE USER CLICKS ON THE TEMPERATURE ELEMENET
+tempElement.addEventListener("click", function(){
+    if(weather.temperature.value === undefined) return;
+    
+    if(weather.temperature.unit == "celsius"){
+        let fahrenheit = celsiusToFahrenheit(weather.temperature.value);
+        fahrenheit = Math.floor(fahrenheit);
+        
+        tempElement.innerHTML = `${fahrenheit}°<span>F</span>`;
+        weather.temperature.unit = "fahrenheit";
+    }else{
+        tempElement.innerHTML = `${weather.temperature.value}°<span>C</span>`;
+        weather.temperature.unit = "celsius"
+    }
+});
+

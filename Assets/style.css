@@ -1,32 +1,91 @@
 @import url('https://fonts.googleapis.com/css2?family=Sansita&display=swap');
 
-#header{
-    text-align: center;
-    font-size: 1.2rem;
-
+#title{
+    color: #07133f;
 
 }
-#nav-bar{
+h1{
+    font-size: 3rem;
+    text-align: center;
+    
+}
+#links{
     display: flex;
-    justify-content: center;
-
-}
-h2{
-    padding: 20px;
+    justify-content: center; 
     text-align: center;
+}
+a{
+    display: flex;
+    /* justify-content: center; */
+    text-decoration: none;
     font-size: 2rem;
+    padding: 20px;
+    color: #07133f;
+}
+a:hover{
+    color: white;
+}
+.navbar{
+   display: inline-block;
+   justify-content: center;
+   text-align: center;
 
 }
-h2:hover{
-    
-
-    
+#aboutUs{
+    font-size: 1.4rem;
+    width: 100%;
+    text-align: center;
+    border: 1px solid red;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    display: flex; 
+    background: #07133f;
 }
+
+#partners{
+    width: 100%;
+    font-size: 1.4rem;
+    text-align: center;
+    align-items: center;
+    color: #07133f;
+    
+    margin-top: 30px;
+}
+
 #weatherContainer{
     text-align: center;
     font-size: 1.2rem;
 }
-
+main{
+    
+        width: 500px;
+        height: 600px;    
+        background-color:rgb(4, 53, 82);
+        
+        display: block;
+        margin: 0 auto;
+        
+        border-radius: 20px;
+        padding-bottom : 50px;
+    
+}
+main:hover{
+    box-shadow: 10px 10px 30px rgb(235, 235, 243);
+}
+#tempValue{
+    width: 400px;
+    height: 80px;
+}
+#tempValue{
+    padding: 0;
+    margin: 0;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    cursor: pointer;
+    
+}
 
 
 
@@ -41,7 +100,19 @@ color: white;
 
 }
 #weatherContainer{
-    font-size: 1rem;
-    background-color: rgb(231, 231, 243);
-    
+    font-size: 1rem; 
+}
+.location p{
+    margin: 0;
+    padding: 0;
+    color: #293251;
+    text-align: center;
+    font-size: 2rem;
+}
+.tempDescription p{
+    padding: 8px;
+    margin: 0;
+    color: #293251;
+    text-align: center;
+    font-size: 1.2em;
 }
