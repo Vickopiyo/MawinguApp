@@ -28,6 +28,7 @@ a{
 }
 a:hover{
     color: white;
+    border: 1px solid #07133f;
 }
 .navbar{
    display: inline-block;
@@ -243,7 +244,7 @@ button{
         text-align: justify;
     }
     a{
-        font-size: 1.4clearrem;
+        font-size: 1.4rem;
     }
     
 }
