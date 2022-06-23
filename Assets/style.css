@@ -236,8 +236,10 @@ button{
     .weather-container{
         width: 300px;
     }
+    p{
+        text-align: justify;
+    }
     
 }
-*{
+
     /* border: 1px solid red; */
-}
