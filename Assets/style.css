@@ -20,7 +20,7 @@ a{
     /* justify-content: center; */
     text-decoration: none;
     font-size: 2rem;
-    padding: 10px;
+    /* padding: 10px; */
     color: #07133f;
 }
 a:hover{
@@ -129,7 +129,7 @@ color: white;
     padding-bottom : 20px;
 }
 input{
-    padding: 15px 40px;
+    padding: 15px 30px;
     border-radius: 10px;
     outline: none;
     border: none;
