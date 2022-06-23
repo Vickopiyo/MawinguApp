@@ -20,7 +20,7 @@ a{
     /* justify-content: center; */
     text-decoration: none;
     font-size: 2rem;
-    padding: 20px;
+    padding: 10px;
     color: #07133f;
 }
 a:hover{
@@ -58,7 +58,7 @@ h2{
     
     height: 400px;
 
-    margin-top: 30px;
+    margin-top: 20px;
 }
 #aboutUs{
     width: 100%;
@@ -66,9 +66,9 @@ h2{
     text-align: center;
     align-items: center;
   
-   height: 300px;
+   height: 400px;
 
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 #weatherContainer{
@@ -80,7 +80,7 @@ h2{
     justify-content: center;
 }
 h3{
-    padding: 20px;
+    padding: 10px;
 }
 #footer{
     font-size: 2rem;
@@ -126,7 +126,7 @@ color: white;
     margin: 0 auto;
     
     border-radius: 20px;
-    padding-bottom : 40px;
+    padding-bottom : 20px;
 }
 input{
     padding: 15px 40px;
@@ -137,11 +137,15 @@ input{
     font-weight: 800;
 }
 #greetingBar{
-    margin-bottom: 20px;
-    padding: 20px;
+    margin-bottom: 10px;
+    padding: 10px;
     text-align: center;
 
 
+}
+.navbar{
+    text-align: center;
+    display: block;
 }
 #greetings{
     color: #07133f;
@@ -158,7 +162,7 @@ button{
 }
 
 .app-title{
-    width: 500px;
+    width: 300px;
     height: 50px;
     border-radius: 10px 10px 0 0;
 }
@@ -191,7 +195,7 @@ button{
 }
 
 .weather-icon{
-    width: 500px;
+    width: 400px;
     height: 128px;
 }
 
@@ -233,4 +237,7 @@ button{
         width: 300px;
     }
     
+}
+*{
+    border: 1px solid red;
 }
