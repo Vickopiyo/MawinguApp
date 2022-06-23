@@ -1,91 +1,68 @@
 
-// selecting of elements
-let weatherImg = document.querySelector(".icon");
-let tempValue = document.querySelector(".tempValue p");
-let tempCondition = document.querySelector(".tempDescription p");
-let locationArea = document.querySelector(".location p");
-let notification = document.querySelector(".notification");
+const iconElement = document.querySelector(".weather-icon");
+const tempElement = document.querySelector(".temperature-value p");
+const descElement = document.querySelector(".temperature-description p");
+const locationElement = document.querySelector(".location p");
+const notificationElement = document.querySelector(".notification");
 
-
-// const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': 'd7829f256amsh4c46947f8f8b0fep162386jsnf3b1b14f5a25',
-// 		'X-RapidAPI-Host': 'community-open-weather-map.p.rapidapi.com'
-// 	}
-// };
-
-// fetch('https://community-open-weather-map.p.rapidapi.com/weather?q=Mombasa', options)
-// 	.then(response => response.json())
-// 	.then(response => console.log(response))
-// 	.catch(err => console.error(err));
-
-
-
-// App information
+// App data
 const weather = {};
 
 weather.temperature = {
     unit : "celsius"
 }
 
-// API KEY $ NAME (VICTOROPIYO)
-let key = "c54fa06564ed8b75fd79a6808ed3ba1d"
+// APP CONSTS AND VARS
+const KELVIN = 273;
+// API KEY
+const key = "82005d27a116c2880c8f0fcb866998a0";
 
-// check ability of browser to get location
-if ("geolocation" in navigator){
-    navigator.geolocation.getCurrentPosition(setPosition,showError);
-
-} else {
-    notification.style.display= "block"
-    notification.innerText= "Geolocation not supported"
+// CHECK IF BROWSER SUPPORTS GEOLOCATION
+if('geolocation' in navigator){
+    navigator.geolocation.getCurrentPosition(setPosition, showError);
+}else{
+    notificationElement.style.display = "block";
+    notificationElement.innerHTML = "<p>Browser doesn't Support Geolocation</p>";
 }
-// setting user position
 
+// SET USER'S POSITION
 function setPosition(position){
-    let latitude=position.coords.latitude;
-    let longitude =position.coords.longitude;
-    getWeather(latitude,longitude);
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    
+    getWeather(latitude, longitude);
 }
 
-// error message
+// SHOW ERROR WHEN THERE IS AN ISSUE WITH GEOLOCATION SERVICE
 function showError(error){
-    notification.style.display= "block"
-    notification.innerText= `${error.message}`
-
+    notificationElement.style.display = "block";
+    notificationElement.innerHTML = `<p> ${error.message} </p>`;
 }
 
-// Get Weather Api from open weather app 
-function getWeather(latitude,longitude){
-    let  api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`
+// GET WEATHER FROM API PROVIDER
+function getWeather(latitude, longitude){
+    let api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
     
     fetch(api)
         .then(function(response){
-            let results = response.json();
-            return results;
-        }
-        
-        
-        
-        )
-        .then(function(results){
+            let data = response.json();
+            return data;
+        })
+        .then(function(data){
             weather.temperature.value = Math.floor(data.main.temp - KELVIN);
-            weather.description = results.weather[0].description;
-            weather.iconId = results.weather[0].icon;
-            weather.city = results.name;
-            weather.country = results.sys.country;
+            weather.description = data.weather[0].description;
+            weather.iconId = data.weather[0].icon;
+            weather.city = data.name;
+            weather.country = data.sys.country;
         })
         .then(function(){
             displayWeather();
-        }
-        );
+        });
 }
-${weather.iconId}
 
-    // DISPLAY WEATHER TO UI
+// DISPLAY WEATHER TO UI
 function displayWeather(){
-    iconElement.innerHTML = `<img src="./Images
-    .png"/>`;
+    iconElement.innerHTML = `<img src="icons/${weather.iconId}.png"/>`;
     tempElement.innerHTML = `${weather.temperature.value}°<span>C</span>`;
     descElement.innerHTML = weather.description;
     locationElement.innerHTML = `${weather.city}, ${weather.country}`;
@@ -111,4 +88,3 @@ tempElement.addEventListener("click", function(){
         weather.temperature.unit = "celsius"
     }
 });
-
