@@ -98,6 +98,11 @@ subTitle{
     font-size: 2rem;
     color: white;
 }
+.innerDesc{
+    color: #07133f;
+    font-size: 2rem;
+    margin-left: 30px;
+}
  
 
 
@@ -180,8 +185,8 @@ button{
 }
 
 .weather-container{
-    width: 300px;
-    height: 260px;
+    width: 400px;
+    height: 400px;
     background-color: #F4F9FF;
 }
 
@@ -215,11 +220,17 @@ button{
     #aboutUs{
         font-size: 1rem;
     }
-    #weatherCointainer{
+    .container{
         width: 300px;
     }
     #links{
         font-size: 1rem;
+    }
+    #alertView{
+        font-size: 1.4rem;
+    }
+    .weather-container{
+        width: 300px;
     }
     
 }
