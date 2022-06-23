@@ -16,11 +16,14 @@ h1{
     text-align: center;
 }
 a{
+    margin-left: 40px;
+    border: 1px solid white;
+    border-radius: 20px;
     display: flex;
     /* justify-content: center; */
     text-decoration: none;
     font-size: 2rem;
-    /* padding: 10px; */
+    padding: 10px;
     color: #07133f;
 }
 a:hover{
@@ -238,6 +241,9 @@ button{
     }
     p{
         text-align: justify;
+    }
+    a{
+        font-size: 1.4clearrem;
     }
     
 }
