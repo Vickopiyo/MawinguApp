@@ -12,10 +12,19 @@ weather.temperature = {
     unit : "celsius"
 }
 
-// APP CONSTS AND VARS
+let greetings =document.querySelector("#greetings")
+let input=document.querySelector("#input")
+
+
+function greeting(){
+    greetings.innerHTML="Hello " +  input.value + ",we are glad you chose us!"
+    
+}
+
+// 
 const KELVIN = 273;
 // API KEY
-const key = "82005d27a116c2880c8f0fcb866998a0";
+const key = "c54fa06564ed8b75fd79a6808ed3ba1d";
 
 // CHECK IF BROWSER SUPPORTS GEOLOCATION
 if('geolocation' in navigator){

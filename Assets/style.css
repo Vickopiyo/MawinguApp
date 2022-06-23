@@ -4,6 +4,7 @@
     color: #07133f;
 
 }
+
 h1{
     font-size: 3rem;
     text-align: center;
@@ -91,7 +92,7 @@ h3{
 }
 #alertView{
     color: white;
-    font-size: 1rem;
+    font-size: 2rem;
 }
 subTitle{
     font-size: 2rem;
@@ -121,6 +122,34 @@ color: white;
     
     border-radius: 20px;
     padding-bottom : 40px;
+}
+input{
+    padding: 15px 40px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: 800;
+}
+#greetingBar{
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+
+
+}
+#greetings{
+    color: #07133f;
+}
+button{
+    outline: none;
+    color: white;
+    background-color: #07133f;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+
+    border: none;
 }
 
 .app-title{
@@ -178,4 +207,19 @@ color: white;
     font-size: 3rem;
     text-align: center;
     cursor: pointer;
+}
+@media  (max-width:700px) {
+    #partners{
+        font-size: 1rem;
+    }
+    #aboutUs{
+        font-size: 1rem;
+    }
+    #weatherCointainer{
+        width: 300px;
+    }
+    #links{
+        font-size: 1rem;
+    }
+    
 }
