@@ -57,19 +57,19 @@ h2{
     text-align: center;
     align-items: center;
     color: #07133f;
-    
+    padding: 5px;
     height: 400px;
-
     margin-top: 20px;
+    line-height: 2.2rem;
 }
 #aboutUs{
     width: 100%;
     font-size: 1.4rem;
     text-align: center;
     align-items: center;
-  
-   height: 400px;
-
+    line-height: 2.2rem;
+    padding: 5px;
+    height: 400px;
     margin-top: 20px;
 }
 
@@ -244,6 +244,10 @@ button{
     a{
         font-size: 1.4rem;
     }
+    h2{
+        font-size: 1.8rem;
+    }
+    
     
 }
 
