@@ -40,11 +40,9 @@ a:hover{
     font-size: 1.4rem;
     width: 100%;
     text-align: center;
-    
-    height: 300px;
-    justify-content: center;
+    height: 200px;
     align-items: center;
-    display: flex; 
+    justify-content: center;
     background: #07133f;
 }
 h2{
