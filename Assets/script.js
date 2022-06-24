@@ -23,10 +23,10 @@ function greeting(){
 
 // 
 const KELVIN = 273;
-// API KEY
+// API key from open weather App
 const key = "c54fa06564ed8b75fd79a6808ed3ba1d";
 
-// CHECK IF BROWSER SUPPORTS GEOLOCATION
+// Checks if browser supports geolocation
 if('geolocation' in navigator){
     navigator.geolocation.getCurrentPosition(setPosition, showError);
 }else{
@@ -34,7 +34,7 @@ if('geolocation' in navigator){
     notificationElement.innerHTML = "<p>Browser doesn't Support Geolocation</p>";
 }
 
-// SET USER'S POSITION
+// set user geolocatinon
 function setPosition(position){
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
@@ -48,7 +48,7 @@ function showError(error){
     notificationElement.innerHTML = `<p> ${error.message} </p>`;
 }
 
-// GET WEATHER FROM API PROVIDER
+// Get weather from openweather API
 function getWeather(latitude, longitude){
     let api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
     
@@ -69,7 +69,7 @@ function getWeather(latitude, longitude){
         });
 }
 
-// DISPLAY WEATHER TO UI
+// Display weather to user
 function displayWeather(){
     iconElement.innerHTML = `<img src="./Images/icons${weather.iconId}.png"/>`;
     tempElement.innerHTML = `${weather.temperature.value}°<span>C</span>`;
@@ -77,14 +77,14 @@ function displayWeather(){
     locationElement.innerHTML = `${weather.city}, ${weather.country}`;
 }
 
-// C to F conversion
+// celsius to farenheight conversion
 function celsiusToFahrenheit(temperature){
     return (temperature * 9/5) + 32;
 }
 
-// WHEN THE USER CLICKS ON THE TEMPERATURE ELEMENET
+// converts celsius to Farenheight when clicked
 tempElement.addEventListener("click", function(){
-    if(weather.temperature.value === undefined) return;
+    if(weather.temperature.value === undefined) return 0;
     
     if(weather.temperature.unit == "celsius"){
         let fahrenheit = celsiusToFahrenheit(weather.temperature.value);

@@ -36,7 +36,7 @@ a:hover{
    text-align: center;
 
 }
-#aboutUs{
+/* #aboutUs{
     font-size: 1.4rem;
     width: 100%;
     text-align: center;
@@ -44,7 +44,7 @@ a:hover{
     align-items: center;
     justify-content: center;
     background: #07133f;
-}
+} */
 h2{
     font-size: 3rem;
     color: white;
@@ -52,25 +52,32 @@ h2{
 }
 
 #partners{
-    width: 100%;
+    width: 80%;
     font-size: 1.4rem;
-    text-align: center;
+    text-align: justify;
     align-items: center;
     color: #07133f;
-    padding: 5px;
+    padding: 15px;
     height: 400px;
     margin-top: 20px;
     line-height: 2.2rem;
+    margin-left: 70px;
+    
+
 }
 #aboutUs{
-    width: 100%;
+    border-radius: 15px;
+    width: 80%;
     font-size: 1.4rem;
-    text-align: center;
+    text-align: justify;
     align-items: center;
     line-height: 2.2rem;
-    padding: 5px;
+    padding: 15px;
     height: 400px;
     margin-top: 20px;
+    background: #07133f;
+    margin-left: 70px;
+    
 }
 
 #weatherContainer{
@@ -137,6 +144,7 @@ input{
     border: none;
     font-size: 1rem;
     font-weight: 800;
+    margin-right: 1.2rem;
 }
 #greetingBar{
     margin-bottom: 10px;
@@ -222,9 +230,27 @@ button{
 @media  (max-width:700px) {
     #partners{
         font-size: 1rem;
+        width: 80%;
+        font-size: 1rem;
+        margin-top: 2rem;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 15px;
+        width: 80%;
+        padding: 20px;
+        margin-bottom: 30px;
+        display: block;
     }
     #aboutUs{
         font-size: 1rem;
+        margin-top: 2rem;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 15px;
+        width: 80%;
+        padding: 20px;
+        
+        display: block;
     }
     .container{
         width: 300px;
@@ -246,6 +272,17 @@ button{
     }
     h2{
         font-size: 1.8rem;
+    }
+    input{
+        width: 200px;
+        padding: 10px;
+        margin-left: .2rem;
+
+    }
+    button{
+        width: auto;
+        padding: 10px;
+        font-size: 1rem;
     }
     
     
