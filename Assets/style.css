@@ -218,6 +218,19 @@ button{
     width: 300px;
     height:60px;
 }
+i{
+    padding: 30px;
+    cursor: pointer;
+}
+i:hover{
+    cursor: pointer;
+    color: #0093E9;
+}
+#socialLinks{
+    font-size: 2.4rem;
+    text-align: center;
+}
+
 
 .temperature-value p{
     padding: 0;
@@ -283,6 +296,9 @@ button{
         width: auto;
         padding: 10px;
         font-size: 1rem;
+    }
+    #footer{
+        font-size: 1.4rem;
     }
     
     
