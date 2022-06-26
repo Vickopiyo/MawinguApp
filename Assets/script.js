@@ -1,4 +1,9 @@
 
+document.addEventListener("DOMContentLoad",function info(){
+    alert("where are checking your weather from?")
+})
+
+
 const iconElement = document.querySelector(".weather-icon");
 const tempElement = document.querySelector(".temperature-value p");
 const descElement = document.querySelector(".temperature-description p");
